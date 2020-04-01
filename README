@@ -1,0 +1,85 @@
+********************************************************************************
+********************************************************************************
+*****                                                                      *****
+*****                              WARNING:                                *****
+*****                                                                      *****
+*****  The bug this plugin exploits has been fixed by Google! This means   ***** 
+*****      that this plugin does not work anymore! Read [1] for more       *****
+*****                            information.                              *****
+*****                                                                      *****
+********************************************************************************
+********************************************************************************
+
+[1] http://www.siorarina.net/2010/10/google-fixed-the-bug-to-scan-invisible-buddies/
+
+
+Google Invisibility Half Scan
+
+Description:
+Find out if your (Gtalk) buddies are Invisible. To do that it sends a presence 
+probe to the buddy. If there’s no respose before time out expires), then you can
+establish that the buddy have not active resources (and therefore it should be 
+OFFLINE). If you get a presence of type ‘unavailable’ means that the buddy has 
+at least an active resource (but we can’t know what! It could be a Gmail or 
+iGoogle page opened with chat turned off!) and therefore COULD be Invisible (at 
+least you know he or she is connected).
+
+*** UPDATE ***
+I’ve added the possibility to filter passive online Google clients (such as 
+Gmail, iGoogle and Google Talk Lab Edition). This clients, when the chat is 
+disabled, send a presence with a vcard if the shared status is not invisible. A 
+mere unavailable presence if shared status is invisible. See [2] for more 
+information.
+
+[2] http://www.siorarina.net/google-invisibility-tracker/
+
+
+NOTE:
+
+o - This is an “HALF SCAN” because you can not establish with certainty that a 
+    buddy is invisible (read Description).
+    
+o - This plugin works only with Gmail address with domain gmail.com. know that I
+    could use Google Talk flag to get all Gmail accounts but this is not 
+    possible in Debian by using only pidgin-dev dependencies. If you know a 
+    better way to do this please contact me!
+
+
+Contacts:
+For bugs reports, hints, … email me at federico.zanco ( at ) gmail.com.
+
+How to install:
+Read the INSTALL file.
+
+How to use:
+1)  Compile and Install (read INSTALL) or Download (from 
+    http://www.siorarina.net/google-invisibility-half-scan/) the plugin for your
+    arch.
+
+    Linux: if you don't have GNU make program installed on your system, to 
+    install the plugin manually copy google-invisibility-half-scan.so in your 
+    purple home dir:
+    
+    (if ~/.purple/plugins/ does not exist: $ mkdir ~/.purple/plugins/ )
+    $ cp google-invisibility-half-scan.so ~/.purple/plugins/
+
+    Windows: Move google-invisibility-half-scan.dll in Pidgin plugins dir (I 
+    suppose you can create 
+    C:\Documents and Settings\<user>\Applications data\.purple\plugins 
+    and move the plugin there). In Windows it should be something like 
+    C:\Programmi\Pidgin\plugins\
+
+3)  Restart Pidgin and in Tools/Plugins you should see Google Invisibility Half 
+    Scan Plugin
+
+    Once enabled, there’are two things you can do with this plugin:
+
+    o - open the context menu by right clicking on a buddy and select “Is it 
+        Invisible?” and wait the response.
+        
+    o - open Tools\Google Invisibility Half Scan Plugin\Massive scan… and wait 
+        the response. You can set timeout values in Tools\Plugin, select Google 
+        Invisibility Half Scan Plugin and then Configure.
+
+
+

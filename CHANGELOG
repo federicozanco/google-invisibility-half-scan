@@ -1,0 +1,11 @@
+Date        Version Note
+
+19/01/2011  0.2.1   Nothing new but I've add a Makefile to make compiling easier
+                    and more efficient. Now unused dependencies like gtk are no
+                    more needed (Finch users should be happy!)
+
+17/07/2010  0.2     Added possibility to filter Gmail, Gtalk, iGoogle page with 
+                    chat disabled. We’re sure that shared status of those 
+                    buddies is not invisible
+                    
+12/06/2010  0.1     First
